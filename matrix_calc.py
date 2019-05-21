@@ -129,7 +129,7 @@ def jacobi(matrix, b, n, cutoff) -> [list, int]:
     r = [1.0 for _ in range(n)]
     x = [1.0 for _ in range(n)]
     try:
-        for iterations in range(1000):
+        for iterations in range(100):
             accuracy = norm_res(matrix, r, b)
             if accuracy <= cutoff:
                 return r, iterations
@@ -158,7 +158,7 @@ def gauss_seidel(matrix, b, n, cutoff) -> [list, int]:
     r = [1.0 for _ in range(n)]
 
     try:
-        for iterations in range(1000):
+        for iterations in range(100):
             accuracy = norm_res(matrix, r, b)
             if accuracy <= cutoff:
                 return r, iterations
@@ -180,7 +180,7 @@ def gauss_seidel(matrix, b, n, cutoff) -> [list, int]:
     return None, iterations
 
 
-def gauss(matrix, b):
+def gauss(matrix, b) -> ([float], float):
     #  Ax = b
     #  PA = LU
     #  LUx = Pb
