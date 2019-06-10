@@ -84,6 +84,7 @@ def zadanie_e(a1, a2, a3):
 
 def main():
     n = 998
+    n = 100
     a1 = 11.0
     a2 = -1.0
     a3 = -1.0

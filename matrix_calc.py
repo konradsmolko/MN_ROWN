@@ -172,7 +172,7 @@ def gauss_seidel(matrix, b, n, cutoff) -> [list, int]:
                 r[i] = (b[i] - o) / matrix[i][i]
 
     except OverflowError:
-        print("ERROR: OverflowError in Jacobi method, terminating.")
+        print("ERROR: OverflowError in Gauss-Seidel method, terminating.")
         return None, iterations
 
     print("ERROR: too many iterations in Gauss-Seidel method, terminating.")
